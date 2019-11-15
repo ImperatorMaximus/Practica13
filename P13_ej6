@@ -1,0 +1,20 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc, char **argv){
+	FILE *file=NULL;
+	unsigned char c[2048];
+	int bytes;
+	file = fopen(argv[1], "wb");
+	file = fopen(argv[2], "rb");
+	if(file != NULL && file2 != NULL){
+		while(bytes = fread(c,1,2048,file2))
+			fwrite(c,1,bytes,file);
+		fclose(file2);
+		fclose(file);
+
+
+	}
+
+return 0;
+
+}
