@@ -1,0 +1,24 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc,char **argv){
+
+	FILE   *file=NULL;
+	//char *c= (char *) malloc(50*sizeof(char));
+	unsigned  char c[2048];
+	file = fopen(argv[1], "rb");
+	int bytes_leidos;
+	if(file !=NULL){	
+		printf("se encontro el archivo\n");
+		while(bytes_leidos = fread(c,1,204,file)){//en donde guarda, donde empieza a leer,cuanto va a leer y de donde va a leer
+		printf("%s",c);
+
+			
+		}
+		fclose(file);
+
+
+	}	
+		
+return 0;
+
+}
