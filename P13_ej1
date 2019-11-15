@@ -1,0 +1,26 @@
+#include<stdio.h>
+#include<stdlib.h>
+int main(int argc,char **argv){
+
+	FILE   *file=NULL;
+	//char *c= (char *) malloc(50*sizeof(char));
+	char c[50];
+	file = fopen(argv[1], "r");
+
+	if(file !=NULL){	
+		printf("se encontro el archivo\n");
+		while(feof(file) == 0 ){
+			fgets(c, 50 , file);
+			// destino, tamaño , y el origen)
+			printf("%s",c);
+
+			
+		}
+		fclose(file);
+
+
+	}
+	//if(!c) free(c);
+	return 0;
+
+}
